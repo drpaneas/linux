@@ -10,4 +10,4 @@ FILES="aclocal.m4 autom4te.cache compile config.guess config.h.in config.log \
        libsrc/Makefile libsrc/Makefile.in libtool ltmain.sh Makefile         \
        Makefile.in missing src/Makefile src/Makefile.in"
 
-rm -vRf $FILES
+rm -vRf "$FILES"

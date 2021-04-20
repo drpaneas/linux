@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: GPL-2.0
 # Copyright (C) 2018 Joe Lawrence <joe.lawrence@redhat.com>
 
-. $(dirname $0)/functions.sh
+. "$(dirname "$0")/functions.sh"
 
 MOD_LIVEPATCH=test_klp_livepatch
 MOD_REPLACE=test_klp_atomic_replace

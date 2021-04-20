@@ -6,7 +6,7 @@
 check_remotes()
 {
 	local what=$1; shift
-	local N=$(bridge fdb sh dev vx | grep 00:00:00:00:00:00 | wc -l)
+	local N=$(bridge fdb sh dev vx | grep -c 00:00:00:00:00:00)
 
 	echo -ne "expected two remotes after $what\t"
 	if [[ $N != 2 ]]; then

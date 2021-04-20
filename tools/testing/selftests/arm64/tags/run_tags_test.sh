@@ -4,8 +4,7 @@
 echo "--------------------"
 echo "running tags test"
 echo "--------------------"
-./tags_test
-if [ $? -ne 0 ]; then
+if ./tags_test; then
 	echo "[FAIL]"
 else
 	echo "[PASS]"

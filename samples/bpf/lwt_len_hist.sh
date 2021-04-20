@@ -32,7 +32,7 @@ echo 1 > ${TRACE_ROOT}/tracing_on
 cp /dev/null ${TRACE_ROOT}/trace
 ip route add 192.168.253.2/32 encap bpf out obj lwt_len_hist_kern.o section len_hist dev $VETH0
 netperf -H 192.168.253.2 -t TCP_STREAM
-cat ${TRACE_ROOT}/trace | grep -v '^#'
+grep -v '^#' ${TRACE_ROOT}/trace
 ./lwt_len_hist
 cleanup
 echo 0 > ${TRACE_ROOT}/tracing_on

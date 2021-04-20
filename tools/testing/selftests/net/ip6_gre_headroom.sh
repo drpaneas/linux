@@ -50,7 +50,7 @@ test_headroom()
 	local tundev=$1; shift
 
 	tc filter add dev swp1 ingress pref 1000 matchall skip_hw \
-		action mirred egress mirror dev $tundev
+		action mirred egress mirror dev "$tundev"
 	ping -I h1 192.0.2.2 -c 1 -w 2 &> /dev/null
 	tc filter del dev swp1 ingress pref 1000
 

@@ -1,3 +1,3 @@
 #!/bin/sh
 
-(cd drivers; ./drivers_test.sh)
+(cd drivers || exit 1; ./drivers_test.sh)

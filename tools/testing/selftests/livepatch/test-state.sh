@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: GPL-2.0
 # Copyright (C) 2019 SUSE
 
-. $(dirname $0)/functions.sh
+. "$(dirname "$0")/functions.sh"
 
 MOD_LIVEPATCH=test_klp_state
 MOD_LIVEPATCH2=test_klp_state2

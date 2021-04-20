@@ -6,8 +6,7 @@ SRC_TREE=../../../../
 test_run()
 {
 	if [ -f ${SRC_TREE}/drivers/char/adi.ko ]; then
-		insmod ${SRC_TREE}/drivers/char/adi.ko 2> /dev/null
-		if [ $? -ne 0 ]; then
+		if ! insmod ${SRC_TREE}/drivers/char/adi.ko 2> /dev/null; then
 			rc=1
 		fi
 	else

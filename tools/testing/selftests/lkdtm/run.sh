@@ -24,7 +24,7 @@ if [ ! -r $TRIGGER ] ; then
 fi
 
 # Figure out which test to run from our script name.
-test=$(basename $0 .sh)
+test=$(basename "$0" .sh)
 # Look up details about the test from master list of LKDTM tests.
 line=$(grep -E '^#?'"$test"'\b' tests.txt)
 if [ -z "$line" ]; then
